@@ -1,7 +1,7 @@
 # CRUD NodeJS with MongoDB
 
 ## Introduction!
-This is a basic CRUD design, using NodeJS and MongoDB. We will use the express library to manipulate MongoDB and the EJS engine to build the visual layer of our application.
+This is a basic CRUD design, using NodeJS and MongoDB. We will use the **Express** library to manipulate MongoDB and the **EJS** engine to build the visual layer of our application.
 
 ## Preparation
 
@@ -40,6 +40,9 @@ git clone https://github.com/vitorric/crud_nodejs.git
 
 # install dependency
 npm install
+
+# install nodemon
+npm install -g nodemon
 
 # develop
 nodemon
