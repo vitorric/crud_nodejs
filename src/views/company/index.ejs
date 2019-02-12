@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+    <link rel="shortcut icon" type="image/png" href="../images/favicon.png"/>
+  </head>
+  <body style="padding: 5px;">
+    <% include ../partials/menu %>
+    <div class="alert alert-info" style="margin-top: 20px;">
+      <h4><b><%= title %></b></h4>
+    </div>
+    <div class="container-fluid" style="margin-top: 20px;">
+      <div class="form-group">
+        <a href="/company/create" class="btn btn-lg btn-primary">Create Company</a>
+      </div>
+      <% if(company.length > 0) { %>
+        <table class="table table-striped">
+          <thead>
+            <th>Name</th>
+            <th>Company Name</th>
+            <th>EIN</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </thead>
+          <tbody>
+            <% for(var i=0; i < company.length;i++) { %>
+            <tr>
+              <td><%= company[i].name%></td>
+              <td><%= company[i].companyName%></td>
+              <td><%= company[i].ein%></td>
+              <td><%= company[i].email%></td>
+              <td>
+                <a href="/company/edit/<%= company[i]._id%>" class="btn btn-lg btn-info">Edit</a>
+                <form action="/company/delete/<%= company[i]._id%>" method="post" style="display: inline-block;">
+                  <button type="submit" class="btn btn-lg btn-danger">Delete</button>
+                </form>
+              </td>
+            </tr>
+            <% } %>
+          </tbody>
+        </table>
+      <% } else { %>
+        <div class="alert alert-danger">No companies found.</div>
+      <% } %>
+    </div>
+  </body>
+</html>

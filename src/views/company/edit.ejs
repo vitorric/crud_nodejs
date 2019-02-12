@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel='stylesheet' href='/stylesheets/bootstrap.min.css' />
+        <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+      </head>
+      <body style="padding: 5px;">
+        <% include ../partials/menu %>
+        <div class="alert alert-info" style="margin-top: 20px;">
+          <h4><b><%= title %></b></h4>
+        </div>
+
+        <form action="/company/update/<%= company._id%>"  method="post" class="container-fluid">
+
+        <div class="form-group">
+          <a href="/company/create" class="btn btn-lg btn-primary">Create Company</a>
+        </div>
+        
+          <div class="form-group jumbotron">
+              <h3>Basic Info</h3>
+            <table style="width: 100%">
+              <tbody>
+                <tr>
+                  <td class="nameField">Name</td>
+                  <td><input value="<%= company.name %>" required class="form-control" type="text" name="name"/></td>
+                  <td class="nameField">Company Name</td>
+                  <td><input value="<%= company.companyName %>" required class="form-control" type="text" name="companyName" /></td>
+                  <td class="nameField">EIN</td>
+                  <td><input value="<%= company.ein %>" required class="form-control" type="text" name="EIN" /></td>
+                </tr>
+              </tbody>
+            </table>  
+            
+          <h3>Address</h3>
+          <table style="width: 100%">
+              <tbody>
+                <tr>
+                  <td class="nameField">Street</td>
+                  <td><input value="<%= company.street %>" class="form-control" type="text" name="street"/></td>
+                  <td class="nameField">Number</td>
+                  <td><input value="<%= company.number %>" class="form-control" type="number" name="number" /></td>
+                </tr>
+                <tr>
+                  <td class="nameField">Neighborhood</td>
+                  <td><input value="<%= company.neighborhood %>" class="form-control" type="text" name="neighborhood" /></td>
+                  <td class="nameField">Complement</td>
+                  <td><input value="<%= company.complement %>" class="form-control" type="text" name="complement" /></td>
+                </tr>
+                <tr>
+                  <td class="nameField">Zip Code</td>
+                  <td><input value="<%= company.zipCode %>" class="form-control" type="text" name="zipCode" /></td>
+                  <td class="nameField">City</td>
+                  <td><input value="<%= company.city %>" class="form-control" type="text" name="city" /></td>
+                  <td class="nameField">State</td>
+                  <td><input value="<%= company.state %>" class="form-control" type="text" name="state" /></td>
+                </tr>               
+              </tbody>
+            </table>  
+            <hr />
+            <h3>Contact</h3>
+            <table style="width: 100%">
+                <tbody>
+                  <tr>
+                    <td class="nameField">Phone 1</td>
+                    <td><input value="<%= company.phone1 %>" class="form-control" type="text" name="phone1"/></td>
+                    <td class="nameField">Phone 2</td>
+                    <td><input value="<%= company.phone2 %>" class="form-control" type="text" name="phone2"/></td>
+                  </tr>
+                  <tr>
+                    <td class="nameField">Email</td>
+                    <td><input value="<%= company.email %>" class="form-control" type="email" name="email"/></td>
+                    <td class="nameField">Site</td>
+                    <td><input value="<%= company.site %>" class="form-control" type="text" name="site"/></td>
+                  </tr>
+                </tbody>
+              </table>  
+          <hr />
+            <h3>Complement</h3>
+            <table style="width: 100%">
+                <tbody>
+                  <tr>
+                    <td class="nameField">Note</td>
+                    <td><textarea class="form-control" type="text" name="note"><%= company.note %></textarea></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <a href="/company" class="btn btn-lg btn-warning" style="color:white;">List</a>
+                      <input type="submit" class="btn btn-lg btn-success" value="Update" />
+
+                      <form action="/company/delete/<%= company._id%>" method="post" style="display: inline-block;">
+                        <button type="submit" class="btn btn-lg btn-danger">Delete</button>
+                      </form>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>  
+          </div>      
+        </form>
+      </body>      
+</html>
+
+
+<style>
+  tr > td {
+    padding-bottom: 0.5em;
+  }
+  
+  .nameField{
+    width: 10%;
+    text-align: right;
+    padding-right: 20px;
+  }
+  </style>
