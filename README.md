@@ -1,7 +1,7 @@
 # CRUD NodeJS with MongoDB
 
 ## Introduction!
-This is a basic CRUD design, using NodeJS and MongoDB. We will use the **Express** library to manipulate MongoDB and the **EJS** engine to build the visual layer of our application.
+This is a basic CRUD design using NodeJS and MongoDB. We will use the **Express** library to manipulate MongoDB and the **EJS** engine to build the visual layer of our application.
 
 ## Preparation
 
@@ -68,7 +68,7 @@ module.exports = {
 };
 ```
 
-You can configure multiple environments, and to connect to one, just go to the file **src/connection/index.js** and look for the line: 
+You can configure multiple environments, and to connect to one, just go to the file **src/connection/index.js** and search for the line: 
 ```js
 let dbPrincipal = 'dev';
 ```
