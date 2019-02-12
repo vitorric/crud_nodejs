@@ -53,6 +53,7 @@ Open your browser and enter the URL [localhost:3000](http://localhost:3000)
 ## Connections
 
 Open the **config/bd/index.js** folder, you will see the following JSON:
+
 ```js
 module.exports = {
     dev: {
@@ -68,7 +69,8 @@ module.exports = {
 };
 ```
 
-You can configure multiple environments, and to connect to one, just go to the file **src/connection/index.js** and search for the line: 
+You can configure multiple environments, and to connect to one, just go to the file **src/connection/index.js** and search for the line:
+
 ```js
 let dbPrincipal = 'dev';
 ```
