@@ -7,7 +7,7 @@ This is a basic CRUD design, using NodeJS and MongoDB. We will use the express l
 
 You need to install [node](http://nodejs.org/), [git](https://git-scm.com/) and [MongoDB](https://www.mongodb.com/download-center/community) locally.
 
-## Structure
+## Folder Structure
 
 ``` bash
 ├───config
