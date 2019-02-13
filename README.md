@@ -34,7 +34,14 @@ You need to install [node](http://nodejs.org/), [git](https://git-scm.com/) and 
 
 ## System Flow
 
-``` mermaid
+```mermaid
+graph LR
+A[Square Rect] -- Link text --> B((Circle))
+A --> C(Round Rect)
+B --> D{Rhombus}
+C --> D
+```
+```mermaid
 graph LR
 A[Front] --> B[Route]
 B --> C[Controller]
