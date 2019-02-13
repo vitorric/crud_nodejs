@@ -35,7 +35,7 @@ You need to install [node](http://nodejs.org/), [git](https://git-scm.com/) and 
 ## System Flow
 
 <p align="center">
-  <img src="https://uploaddeimagens.com.br/imagens/crud_nodejs-png">
+  <img src="https://uploaddeimagens.com.br/images/001/896/019/original/crud_nodejs.png?1550085841">
 </p>
 
 ## Getting started
