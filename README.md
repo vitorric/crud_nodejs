@@ -32,6 +32,20 @@ You need to install [node](http://nodejs.org/), [git](https://git-scm.com/) and 
         └───partials
 ```
 
+## System Flow
+
+```mermaid
+graph LR
+A[Front] --> B[Route]
+B --> C[Controller]
+C --> D{Consult BD?}
+D -- YES --> E[Repository]
+D -- NO --> C
+E -- Return --> C
+C -- Return --> B
+B -- Return --> A
+```
+
 ## Getting started
  
  * Go to the folder you installed MongoDB and run the mongod.exe file.
