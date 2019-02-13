@@ -1,11 +1,11 @@
 # CRUD NodeJS with MongoDB
 
 ## Introduction!
-This is a basic CRUD design using NodeJS and MongoDB. We will use the **Express** library to manipulate MongoDB and the **EJS** engine to build the visual layer of our application.
+This is a basic CRUD design using NodeJS and MongoDB. We will use the **Express** library to manipulate MongoDB and the **EJS** engine to build the visual layer of our application. 
 
 ## Preparation
 
-You need to install [node](http://nodejs.org/), [git](https://git-scm.com/) and [MongoDB](https://www.mongodb.com/download-center/community) locally.
+You need to install [node](http://nodejs.org/), [git](https://git-scm.com/) and [MongoDB](https://www.mongodb.com/download-center/community) locally. 
 
 ## Folder Structure
 
@@ -33,22 +33,27 @@ You need to install [node](http://nodejs.org/), [git](https://git-scm.com/) and 
 ```
 
 ## Getting started
+ 
+ * Go to the folder you installed MongoDB and run the mongod.exe file.
 
+ * Open CMD and execute:
 ```bash
-# clone the project
+# clone the project - when cloning the project it will automatically create a folder named crud_nodejs
 git clone https://github.com/vitorric/crud_nodejs.git
-
-# install dependency
+```
+ * Access the folder crud_nodejs, open CMD and execute:
+```bash
+# install project dependencies
 npm install
 
-# install nodemon
+# install nodemon to start project
 npm install -g nodemon
 
-# develop
+# start project
 nodemon
 ```
 
-Open your browser and enter the URL [localhost:3000](http://localhost:3000)
+Open your browser and enter the URL [http://localhost:3000](http://localhost:3000)
 
 ## Connections
 
@@ -57,7 +62,6 @@ Open the **config/bd/index.js** folder, you will see the following JSON:
 ```js
 module.exports = {
     dev: {
-        'PORT': 3000,
         'MONGO_HOST': '127.0.0.1',
         'MONGO_PORT': '27017',
         'MONGO_USER': '',
