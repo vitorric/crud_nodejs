@@ -34,27 +34,16 @@ You need to install [node](http://nodejs.org/), [git](https://git-scm.com/) and 
 
 ## System Flow
 
-mermaid("
-graph LR
-  A-->B
-  A-->C
-  C-->E
-  B-->D
-  C-->D
-  D-->F
-  E-->F
-")
-mermaid("
-graph LR
-A[Front] --> B[Route]
-B --> C[Controller]
-C --> D{Consult BD?}
-D -- YES --> E[Repository]
-D -- NO --> C
-E -- Return --> C
-C -- Return --> B
-B -- Return --> A
-")
+graph: |
+    graph LR;
+    A[Physics Based Model]-->B(Feature Identification);
+    B-->C(Feature Encoding);
+    B-->b1((segmentation));
+    C-->D(Data Analytics);
+    C-->c1((spatial statistics));
+    D-->|collaborate|E{Design};
+    D-->d1((PCA));
+    E-->|iterate|A;
 
 ## Getting started
  
