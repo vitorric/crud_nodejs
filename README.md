@@ -34,16 +34,9 @@ You need to install [node](http://nodejs.org/), [git](https://git-scm.com/) and 
 
 ## System Flow
 
-graph: |
-    graph LR;
-    A[Physics Based Model]-->B(Feature Identification);
-    B-->C(Feature Encoding);
-    B-->b1((segmentation));
-    C-->D(Data Analytics);
-    C-->c1((spatial statistics));
-    D-->|collaborate|E{Design};
-    D-->d1((PCA));
-    E-->|iterate|A;
+<p align="center">
+  <img src="https://imgur.com/a/CkBl863">
+</p>
 
 ## Getting started
  
