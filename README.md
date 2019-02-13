@@ -88,3 +88,5 @@ let dbPrincipal = 'dev';
 Change the value **'dev'** to your new environment.
 
 ## Demonstration
+
+![](crud_nodejs.gif)
