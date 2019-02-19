@@ -92,11 +92,9 @@ You can configure multiple environments, and to connect to one, just go to the f
 let dbPrincipal = 'dev';
 ```
 
-```bash
 If you change the value of dbPrincipal to homolog, you will get data from a database in mLab. The data inserted in mLab is a json called **company.json**, you can get it in root of project.
-```
 
-Change the value **'dev'** to your new environment.
+Or, you can change the value **'dev'** to your new environment.
 
 ## Demonstration
 
