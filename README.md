@@ -75,6 +75,13 @@ module.exports = {
         'MONGO_DB': 'yourDB',
         'MONGO_AUTH_SOURCE': ''
     },
+    homolog: {
+        'MONGO_HOST': 'ds341825.mlab.com',
+        'MONGO_PORT': 41825,
+        'MONGO_DB': 'syscompany',
+        'MONGO_USER': 'syscompany',
+        'MONGO_PWD': 'nahXZB7aGZ4.T<eK'
+    }
     ...
 };
 ```
@@ -83,6 +90,10 @@ You can configure multiple environments, and to connect to one, just go to the f
 
 ```js
 let dbPrincipal = 'dev';
+```
+
+```bash
+If you change the value of dbPrincipal to homolog, you will get data from a database in mLab. The data inserted in mLab is a json called **company.json**, you can get it in root of project.
 ```
 
 Change the value **'dev'** to your new environment.
